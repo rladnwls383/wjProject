@@ -1,5 +1,5 @@
 import { Outlet, useLocation } from 'react-router-dom'
-import Footer from '../Index'
+import Footer from '../Footer/Index'
 import Header from '../Header'
 
 // component: 레이아웃

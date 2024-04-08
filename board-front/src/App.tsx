@@ -7,7 +7,7 @@ import Search from 'views/Search';
 import BoardDetail from 'views/Board/Detail';
 import BoardWrite from 'views/Board/Write';
 import BoardUpdate from 'views/Board/Update';
-import Container from 'layouts/Footer/Container';
+import Container from 'layouts/Container';
 import { MAIN_PATH } from 'constant';
 import { AUTH_PATH } from 'constant';
 import { SEARCH_PATH } from 'constant';
