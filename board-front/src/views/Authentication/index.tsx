@@ -51,9 +51,9 @@ export default function Authentication() {
       if (code === 'SF' || code === 'VF') setError(true);
       if (code !== 'SU') return;
 
-      const { token, exprirationTime } = responseBody as SignInResponseDto;
+      const { token, expirationTime } = responseBody as SignInResponseDto;
       const now = new Date().getTime();
-      const expires = new Date(now + exprirationTime * 1000);
+      const expires = new Date(now + expirationTime * 1000);
 
       setCookie('accessToken', token, { expires, path: MAIN_PATH() });
       navigator(MAIN_PATH());
