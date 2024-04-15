@@ -1,4 +1,4 @@
-import { ChangeEvent, KeyboardEvent, forwardRef } from 'react';
+import { ChangeEvent, KeyboardEvent, SetStateAction, forwardRef } from 'react';
 import './style.css';
 
 // interface: Input Box 컴포넌트 Propperties
@@ -25,7 +25,7 @@ const InputBox = forwardRef<HTMLInputElement, Props>((props: Props, ref) => {
     const { label, type, placeholder, value, error, icon, message } = props;
     const { onChange, onButtonClick, onKeyDown } = props;
 
-    // evebt handler: input 키 이벤트 처리 함수
+    // event handler: input 키 이벤트 처리 함수
     const onKeyDownHandler = (event: KeyboardEvent<HTMLInputElement>) => {
         if(!onKeyDown) return;
         onKeyDown(event);
@@ -36,7 +36,7 @@ const InputBox = forwardRef<HTMLInputElement, Props>((props: Props, ref) => {
         <div className='inputbox'>
             <div className='inputbox-label'>{label}</div>
             <div className={error ? 'inputbox-container-error' : 'inputbox-container'}>
-                <input ref={ref} type={type} className='input' placeholder={placeholder} value={value} onChange={onChange}/>
+                <input ref={ref} type={type} className='input' placeholder={placeholder} value={value} onChange={onChange} onKeyDown={onKeyDownHandler}/>
                 {onButtonClick !== undefined && (
                 <div className='icon-button' onClick={onButtonClick}>
                     {icon !== undefined && <div className={`icon ${icon}`}></div>}

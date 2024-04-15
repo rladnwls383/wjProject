@@ -1,3 +1,8 @@
+.divider {
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+
 .black-button {
     border-radius: 46px;
     width: 95px;
@@ -133,7 +138,7 @@
     background-image: url(assets/image/eye-light-on.png);
 }
 
-.expand-rgiht-light-icon {
+.expand-right-light-icon {
     background-image: url(assets/image/expand-right-light.png);
 }
 
@@ -154,4 +159,20 @@
 
 .search-light-icon {
     background-image: url(assets/image/search-light.png);
+}
+
+.check-round-fill-icon {
+    background-image: url(assets/image/check-round-fill.png);
+}
+
+.check-ring-light-icon {
+    background-image: url(assets/image/check-ring-light.png);
+}
+
+.image-box-light-icon {
+    background-image: url(assets/image/image-box-light.png);
+}
+
+.close-icon {
+    background-image: url(assets/image/close.png);
 }

@@ -13,6 +13,7 @@ import com.woojin.boardback.dto.response.auth.SignUpResponseDto;
 import com.woojin.boardback.entity.UserEntity;
 import com.woojin.boardback.provider.JwtProvider;
 import com.woojin.boardback.repository.UserRespository;
+import com.woojin.boardback.service.AuthService;
 
 import lombok.RequiredArgsConstructor;
 

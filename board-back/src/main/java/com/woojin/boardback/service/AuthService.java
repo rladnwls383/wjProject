@@ -1,4 +1,4 @@
-package com.woojin.boardback.service.implement;
+package com.woojin.boardback.service;
 
 import org.springframework.http.ResponseEntity;
 

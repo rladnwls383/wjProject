@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.woojin.boardback.dto.request.auth.SignInRequestDto;
 import com.woojin.boardback.dto.request.auth.SignUpRequestDto;
 import com.woojin.boardback.dto.response.auth.SignUpResponseDto;
+import com.woojin.boardback.service.AuthService;
 import com.woojin.boardback.dto.response.auth.SignInResponseDto;
-import com.woojin.boardback.service.implement.AuthService;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
