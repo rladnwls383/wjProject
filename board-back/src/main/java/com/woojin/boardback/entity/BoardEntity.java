@@ -47,4 +47,20 @@ public class BoardEntity {
         this.writerEmail = email;
     }
 
+    public void increaseViewCount() {
+        this.viewCount++;
+    }
+
+    public void increaseFavoriteCount() {
+        this.favoriteCount++;
+    }
+
+    public void increaseCommentCount() {
+        this.commentCount++;
+    }
+
+    public void decreaseFavoriteCount() {
+        this.favoriteCount--;
+    }
+
 }
