@@ -7,11 +7,13 @@ import com.woojin.boardback.dto.response.board.GetCommentListResponseDto;
 import com.woojin.boardback.dto.response.board.PostCommentResponseDto;
 import com.woojin.boardback.dto.response.board.GetBoardResponseDto;
 import com.woojin.boardback.dto.response.board.GetFavoriteListResponseDto;
+import com.woojin.boardback.dto.request.board.PatchBoardRequestDto;
 import com.woojin.boardback.dto.request.board.PostBoardRequestDto;
 import com.woojin.boardback.dto.request.board.PostCommentRequestDto;
 import com.woojin.boardback.dto.response.board.PostBoardResponseDto;
 import com.woojin.boardback.dto.response.board.PutFavoriteResponseDto;
 import com.woojin.boardback.dto.response.board.DeleteBoardResponseDto;
+import com.woojin.boardback.dto.response.board.PatchBoardResponseDto;
 
 public interface BoardService {
     ResponseEntity<? super GetBoardResponseDto> getBoard(Integer boardNumber);
@@ -22,4 +24,5 @@ public interface BoardService {
     ResponseEntity<? super PutFavoriteResponseDto> putFavorite(Integer boardNumber, String email);
     ResponseEntity<? super IncreaseViewCountResponseDto> increaseViewCount(Integer boardNumber);
     ResponseEntity<? super DeleteBoardResponseDto> deleteBoard(Integer boardNumber, String email);
+    ResponseEntity<? super PatchBoardResponseDto> patchBoard(PatchBoardRequestDto dto, Integer boardNumber, String email);
 }
