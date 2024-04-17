@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.woojin.boardback.dto.response.board.GetTop3BoardListResponseDto;
+import com.woojin.boardback.dto.response.board.GetLatestBoardListResponseDto;
 import com.woojin.boardback.dto.response.board.PatchBoardResponseDto;
 import com.woojin.boardback.dto.response.board.DeleteBoardResponseDto;
 import com.woojin.boardback.dto.response.board.IncreaseViewCountResponseDto;
@@ -67,6 +69,19 @@ public class BoardController {
         ResponseEntity<? super IncreaseViewCountResponseDto> response = boardService.increaseViewCount(boardNumber);
         return response;
     }
+
+    @GetMapping("/latest-list")
+    public ResponseEntity<? super GetLatestBoardListResponseDto> getLatestBoardList() {
+        ResponseEntity<? super GetLatestBoardListResponseDto> response = boardService.getLatestBoardList();
+        return response;
+    }
+    
+    @GetMapping("/top-3")
+    public ResponseEntity<? super GetTop3BoardListResponseDto> getTop3BoardList() {
+        ResponseEntity<? super GetTop3BoardListResponseDto> response = boardService.getTop3BoardList();
+        return response;
+    }
+    
 
     @PostMapping("")
     public ResponseEntity<? super PostBoardResponseDto> postBoard(
