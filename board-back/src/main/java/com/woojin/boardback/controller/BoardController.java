@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.woojin.boardback.dto.response.board.GetUserBoardListResponseDto;
 import com.woojin.boardback.dto.response.board.GetSearchBoardListResponseDto;
 import com.woojin.boardback.dto.response.board.GetTop3BoardListResponseDto;
 import com.woojin.boardback.dto.response.board.GetLatestBoardListResponseDto;
@@ -92,6 +93,13 @@ public class BoardController {
         return response;
     }
     
+    @GetMapping("/user-board-list/{email}")
+    public ResponseEntity<? super GetUserBoardListResponseDto> getUserBoardList(
+        @PathVariable("email") String email
+    ) {
+        ResponseEntity<? super GetUserBoardListResponseDto> response = boardService.getUserBoardList(email);
+        return response;
+    }
 
     @PostMapping("")
     public ResponseEntity<? super PostBoardResponseDto> postBoard(
