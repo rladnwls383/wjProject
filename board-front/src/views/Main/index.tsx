@@ -42,11 +42,11 @@ export default function Main() {
     return (
       <div id='main-top-wrapper'>
         <div className='main-top-container'>
-          <div className='main-top-title'>{'Woojn board에서\n다양한 이야기를 나눠보세요'}</div>
+          <div className='main-top-title'>{'Woojin board에서\n다양한 이야기를 나눠보세요'}</div>
           <div className='main-top-contents-box'>
             <div className='main-top-contents-title'>{'주간 TOP 3 게시물'}</div>
             <div className='main-top-contents'>
-              {top3BoardList.map(top3ListItem => <Top3Item top3ListItem={top3ListItem} />)}
+              {top3BoardList.map(top3ListItem => <Top3Item key={top3ListItem.boardNumber} top3ListItem={top3ListItem} />)}
             </div>
           </div>
         </div>
@@ -107,14 +107,14 @@ export default function Main() {
           <div className='main-bottom-title'>{'최신 게시물'}</div>
           <div className='main-bottom-contents-box'>
             <div className='main-bottom-current-contents'>
-              {viewList.map(boardListItem => <BoardItem boardListItem={boardListItem} />)}   
+              {viewList.map(boardListItem => <BoardItem key={boardListItem.boardNumber} boardListItem={boardListItem} />)}   
             </div>
             <div className='main-bottom-popular-box'>
               <div className='main-bottom-popular-card'>
                 <div className='main-bottom-popular-card-container'>
                   <div className='main-bottom-popular-card-title'>{'인기 검색어'}</div>
                   <div className='main-bottom-popular-card-contents'>
-                    {popularWordList.map(word => <div className='word-badge' onClick={() => onPopularWordClickHandler(word)}>{word}</div>)}
+                    {popularWordList.map(word => <div key={word} className='word-badge' onClick={() => onPopularWordClickHandler(word)}>{word}</div>)}
                   </div>
                 </div>
               </div>

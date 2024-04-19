@@ -158,7 +158,7 @@ export default function BoardDetail() {
         <div className='divider'></div>
         <div className='board-detail-top-main'>
           <div className='board-detail-main-text'>{board.content}</div>
-          {board.boardImageList.map(image => <img className='board-detail-main-image' src={image}/>)}
+          {board.boardImageList.map(image => <img key={image} className='board-detail-main-image' src={image}/>)}
         </div>
       </div>
       );
@@ -323,7 +323,7 @@ export default function BoardDetail() {
           <div className='board-detail-bottom-favorite-container'>
             <div className='board-detail-bottom-favorite-title'>{'좋아요 '}<span className='emphasis'>{favoriteList.length}</span></div>
             <div className='board-detail-bottom-favorite-content'>
-              {favoriteList.map(item => <FavoriteItem favoriteListItem={item} />)}
+              {favoriteList.map(item => <FavoriteItem key={item.email} favoriteListItem={item} />)}
             </div>
           </div>
         </div>
@@ -333,7 +333,7 @@ export default function BoardDetail() {
           <div className='board-detail-bottom-comment-container'>
             <div className='board-detail-bottom-comment-title'>{'댓글 '}<span className='emphasis'>{totalCommentCount}</span></div>
             <div className='board-detail-bottom-comment-list-container'>
-              {viewList.map(item => <CommentItem commentListItem={item} />)}
+              {viewList.map(item => <CommentItem key={item.writeDatetime} commentListItem={item} />)}
             </div>
           </div>
           <div className='divider'></div>

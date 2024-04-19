@@ -80,7 +80,7 @@ export default function Search() {
         <div className='search-contents-box'>
           {count === 0 ?
           <div className='search-contents-nothing'>{'검색 결과가 없습니다.'}</div> :
-          <div className='search-contents'>{viewList.map(boardListItem => <BoardItem boardListItem={boardListItem} />)}</div>
+          <div className='search-contents'>{viewList.map(boardListItem => <BoardItem key={boardListItem.boardNumber} boardListItem={boardListItem} />)}</div>
           }
           <div className='search-relation-box'>
             <div className='search-relation-card'>
@@ -89,7 +89,7 @@ export default function Search() {
                 {relativeWordList.length === 0 ?
                   <div className='search-relation-card-contents-nothing'>{'관련 검색어가 없습니다.'}</div> :
                   <div className='search-relation-card-contents'>
-                  {relativeWordList.map(word => <div className='word-badge' onClick={() => onRelationWordClickHandler(word)}>{word}</div>)}
+                  {relativeWordList.map(word => <div key={word} className='word-badge' onClick={() => onRelationWordClickHandler(word)}>{word}</div>)}
                   </div>
                 }
               </div>

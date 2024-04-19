@@ -48,9 +48,11 @@ export default function Pagination(props: Props) {
         <div className='pagination-change-link-text' onClick={onPreviousClickHandler}>{'이전'}</div>
       </div>
       <div className='pagination-divider'>{'\|'}</div>
-      {viewPageList.map(page => page === currentPage ? 
-        <div className='pagination-text-active'>{page}</div> :
-        <div className='pagination-text' onClick={() => onPageClickHandler(page)}>{page}</div>
+      {viewPageList.length === 0 ?
+      <div className='pagination-text-active'>{1}</div> :
+      viewPageList.map(page => page === currentPage ? 
+        <div key={page} className='pagination-text-active'>{page}</div> :
+        <div key={page} className='pagination-text' onClick={() => onPageClickHandler(page)}>{page}</div>
       )}
       <div className='pagination-divider'>{'\|'}</div>
       <div className='pagination-change-link-box'>

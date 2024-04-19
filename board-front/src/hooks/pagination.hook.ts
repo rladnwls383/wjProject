@@ -8,14 +8,14 @@ const usePagination = <T>(countPerPage: number) => {
     //state: 현재 페이지 번호 상태
     const [currentPage, setCurrentPage] = useState<number>(1);
 
-    //state: 전체 메이지 번호 리스트 상태
+    //state: 전체 페이지 번호 리스트 상태
     const [totalPageList, setTotalPageList] = useState<number[]>([1]);
-    //state: 보여줄 메이지 번호 리스트 상태
+    //state: 보여줄 페이지 번호 리스트 상태
     const [viewPageList, setViewPageList] = useState<number[]>([1]);
     //state: 현새 섹션 상태
     const [currentSection, setCurrentSection] = useState<number>(1);
 
-    //state: 전체 섹선 상대
+    //state: 전체 섹션 상대
     const [totalSection, setTotalSection] = useState<number>(1);
 
     // function: 보여줄 객체 리스트 추출 함수
