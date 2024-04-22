@@ -114,7 +114,7 @@ export default function Authentication() {
             <div className='auth-card-title-box'>
               <div className='auth-card-title'>{'로그인'}</div>
             </div>
-              <InputBox ref={emailRef} label='이메일 주소' type='text' placeholder='이메일 주소를 입력해주세요.' error={error} value={email} onChange={onEmailChangeHandler} onKeyDown={onEmailKeyDownHandler} />
+              <InputBox ref={emailRef} label='아이디' type='text' placeholder='이메일 주소를 입력해주세요.' error={error} value={email} onChange={onEmailChangeHandler} onKeyDown={onEmailKeyDownHandler} />
               <InputBox ref={passwordRef} label='패스워드' type={passwordType} placeholder='비밀번호를 입력해주세요.' error={error} value={password} onChange={onPasswordChangeHandler} icon={passwordButtonIcon} onButtonClick={onPasswordButtonClickHandler} onKeyDown={onPasswordKeyDownHandler} />
             </div>
             <div className='auth-card-bottom'>
@@ -469,7 +469,7 @@ export default function Authentication() {
             </div>
             {page === 1 && (
               <>
-                <InputBox ref={emailRef} label='이메일 주소*' type='text' placeholder='이메일 주소를 입력해주세요.' value={email} onChange={onEmailChangeHandler} error={isEmailError} message={emailErrorMessage} onKeyDown={onEmailKeyDownHandler}/>
+                <InputBox ref={emailRef} label='아이디*' type='text' placeholder='이메일 주소를 입력해주세요.' value={email} onChange={onEmailChangeHandler} error={isEmailError} message={emailErrorMessage} onKeyDown={onEmailKeyDownHandler}/>
                 <InputBox ref={passwordRef} label='비밀번호*' type={passwordType} placeholder='비밀번호를 입력해주세요.' value={password} onChange={onPasswordChangeHandler} error={isPasswordError} message={passwordErrorMessage} icon={passwordButtonIcon} onButtonClick={onPasswordButtonClickHandler} onKeyDown={onPasswordKeyDownHandler}/>
                 <InputBox ref={passwordCheckRef} label='비밀번호 확인*' type={passwordCheckType} placeholder='비밀번호를 다시 입력해주세요.' value={passwordCheck} onChange={onPasswordCheckChangeHandler} error={isPasswordCheckError} message={passwordCheckErrorMessage} icon={passwordCheckButtonIcon} onButtonClick={onPasswordCheckButtonClickHandler} onKeyDown={onPasswordCheckKeyDownHandler}/>
               </>
@@ -512,15 +512,6 @@ export default function Authentication() {
   return (
     <div id='auth-wrapper'>
       <div className='auth-container'>
-        <div className='auth-jumbotron-box'>
-          <div className='auth-jumbotron-contents'>
-            <div className='auth-logo-icon'></div>
-            <div className='auth-jumbotron-text-box'>
-              <div className='auth-jumbotron-text'>{'환영합니다.'}</div>
-              <div className='auth-jumbotron-text'>{'Woojin Board 입니다.'}</div>
-            </div>
-          </div>
-        </div>
         {view === 'sign-in' && <SignInCard/>}
         {view === 'sign-up' && <SignUpCard/>}
       </div>

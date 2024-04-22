@@ -1,25 +1,20 @@
 #auth-wrapper {
     padding: 100px 0px 150px;
-    min-width: 1440px;
     height: calc(100vh - 68px - 100px - 150px);
-    min-height: 960px;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    background-image: url(assets/auth-background.png);
+    background-color: #f7f7f5;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: auto;
 }
 
 .auth-container {
-    width: 1200px;
+    width: 600px;
     height: 100%;
-
-    display: grid;
-    grid-template-columns: 7fr 5fr;
     column-gap: 78px;
 }
 
@@ -68,17 +63,16 @@
 }
 
 .auth-card {
-    grid-column: 2 / 3;
-
     border-radius: 10px;
     padding: 50px 50px 30px;
 
     background-color: rgba(255, 255, 255, 1);
-    box-shadow: 0px 4px 47px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 47px 0px rgba(0, 0, 0, 0.2);
 }
 
 .auth-card-box {
     height: 100%;
+    min-height: 700px;
 
     display: flex;
     flex-direction: column;
@@ -115,6 +109,7 @@
 .auth-card-bottom {
     display: flex;
     flex-direction: column;
+
     gap: 20px;
 }
 
