@@ -117,14 +117,14 @@ export default function Header() {
             navigate(USER_PATH(email));
         };
 
-        // event handler: 마이페이지 버튼 클릭 이벤트 처리 함수
+        // event handler: 로그아웃 버튼 클릭 이벤트 처리 함수
         const onSignOutButtonClickHandler = () => {
             resetLoginUser();
             setCookie('accessToken', '', { path: MAIN_PATH(), expires: new Date() });
             navigate(MAIN_PATH());
         };
 
-        // event handler: 마이페이지 버튼 클릭 이벤트 처리 함수
+        // event handler: 로그인 버튼 클릭 이벤트 처리 함수
         const onSignInButtonClickHandler = () => {
             navigate(AUTH_PATH());
         };
@@ -132,8 +132,8 @@ export default function Header() {
         // render: 로그아웃 버튼 컴포넌트 렌더링
         if (isLogin && userEmail === loginUser?.email)
         return <div className='white-button' onClick={onSignOutButtonClickHandler}>{'로그아웃'}</div>;
-        if (isLogin)
         // render: 마이페이지 버튼 컴포넌트 렌더링
+        if (isLogin)
         return <div className='white-button' onClick={onMyPageButtonClickHandler}>{'마이페이지'}</div>;
         // render: 로그인 버튼 컴포넌트 렌더링
         return <div className='black-button' onClick={onSignInButtonClickHandler}>{'로그인'}</div>;
@@ -243,8 +243,9 @@ export default function Header() {
                 <div className='icon-box'>
                     <div className='icon logo-dark-icon'></div>
                 </div>
-                <div className='header-logo'>{'Woojin Board'}</div>
+                <div className='header-logo'>{'지니JINI'}</div>
             </div>
+            <div className='header-center-box'></div>
             <div className='header-right-box'>
                 {(isAuthPage || isMainPage || isSearchPage || isBoardDetailPage) && <SearchButton/>}
                 {(isMainPage || isSearchPage || isBoardDetailPage || isUserPage) && <MyPageButton/>}

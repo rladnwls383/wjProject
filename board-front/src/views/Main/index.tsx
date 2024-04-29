@@ -12,6 +12,7 @@ import { ResponseDto } from 'apis/response';
 import { usePagination } from 'hooks';
 import Pagination from 'components/Pagination';
 import { GetPopularListResponseDto } from 'apis/response/search';
+import Carousel from 'components/Carousel';
 
 // component: 메인 화면 컴포넌트
 export default function Main() {
@@ -42,7 +43,7 @@ export default function Main() {
     return (
       <div id='main-top-wrapper'>
         <div className='main-top-container'>
-          <div className='main-top-title'>{'Woojin board에서\n다양한 이야기를 나눠보세요'}</div>
+          <Carousel/>
           <div className='main-top-contents-box'>
             <div className='main-top-contents-title'>{'주간 TOP 3 게시물'}</div>
             <div className='main-top-contents'>

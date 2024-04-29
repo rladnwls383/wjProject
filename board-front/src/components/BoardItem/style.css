@@ -1,7 +1,9 @@
 .board-list-item {
     padding: 24px;
 
+    border-radius: 10px;
     background-color: rgba(255, 255, 255, 1);
+    outline: 1px solid #DFE8EE;;
 
     display: flex;
     align-items: center;

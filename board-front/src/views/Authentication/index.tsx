@@ -508,6 +508,7 @@ export default function Authentication() {
     );
   };
 
+
     // render: 인증 화면 컴포넌트 렌더링
   return (
     <div id='auth-wrapper'>

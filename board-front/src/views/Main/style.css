@@ -1,13 +1,15 @@
 #main-top-wrapper {
     padding: 80px 0 40px;
     
+    background-color: #F4F8FE;
+
     display: flex;
     justify-content: center;
 }
 
 .main-top-container {
-    width: 1200px;
-    min-width: 1200px;
+    width: 1400px;
+    min-width: 1400px;
     
     display: flex;
     flex-direction: column;
@@ -44,7 +46,7 @@
     color: rgba(0, 0, 0, 1);
 
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 650;
     line-height: 140%;
 
 }
@@ -61,7 +63,7 @@
     display: flex;
     justify-content: center;
     
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: #E9F1FD;
 }
 
 .main-bottom-container {
@@ -107,6 +109,9 @@
 
 .main-bottom-popular-card {
     padding: 24px;
+    min-height: 152px;
+    border-radius: 10px;
+    outline: 1px solid #DFE8EE;
     background-color: rgba(255, 255, 255, 1);
 }
 
