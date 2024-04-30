@@ -8,7 +8,7 @@ import lottieJson from 'assets/lottie/animation.json'
 
 export default function Animations() {
   return (
-    <Lottie style={{marginLeft : '100px', marginBottom : '40px'}}
+    <Lottie className='lottie'
       loop
       animationData={lottieJson}
       play

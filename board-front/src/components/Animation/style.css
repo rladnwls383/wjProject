@@ -1,0 +1,9 @@
+.lottie {
+    margin-left : '100px';
+    margin-bottom : '40px';
+
+    @media (max-width: 660px) {
+        margin-left : '20px';
+        margin-bottom : '40px';  
+    }
+}

@@ -39,8 +39,7 @@ const Carousel = () => {
             <Slider { ...settings }>
             <div className='carousel-item'>
                 <Animations/>
-                <div className='carousel-item-left'>
-                    </div>
+                <div className='carousel-item-left'></div>
                 <div className='carousel-item-right'>
                     <div className='carousel-item-title'>
                     {'상상했던 모든 것을\n지니에서 실현해 보세요!'}
